@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true #允许前端发起option询问请求
+        cors-configurations:
+          '[/**]': #拦截所有一起请求
+            allowCredentials: true #是否允许携带cookie
+            allowedHeaders: * #允许携带所有的请求头信息
+            maxAge: 36000 #跨域检查的有效期
+            allowedOrigins: #允许那些网站请求跨域
+              - "localhost"
+            allowedMethods:
+              - "GET"
+              - "POST"
+              - "OPTIONS"
+              - "DELETE"
+              - "PUT"
+
+
+#      routes: #网关路由配置
+#        - id: manager_server #路由ID,自定义，只要唯一就可以了
+#          uri: lb://manager-server #路由的目标地址，lb就是负载均衡，后面跟服务名称
+#          predicates:
+#            - Path=/nacos/**  #这个是按照路劲匹配
+
+

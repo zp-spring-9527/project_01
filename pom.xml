@@ -34,6 +34,7 @@
     <modules>
         <module>z-chenger-gateway-client</module>
         <module>z-chenger-gateway-utils</module>
+        <module>z-chenger-gateway-core</module>
         <module>z-chenger-gateway-web</module>
     </modules>
     <parent>
