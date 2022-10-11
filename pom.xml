@@ -158,7 +158,6 @@
         </dependencies>
     </dependencyManagement>
     <!--对bootstrap.yaml的支持-->
-
     <build>
         <plugins>
             <plugin>

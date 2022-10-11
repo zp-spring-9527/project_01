@@ -1,0 +1,8 @@
+#docker-compose的版本号，与docker的版本号对应
+version: "3.8"
+services:
+  #服务名称，随便取
+  tomcat:
+    image: tomcat:9.0.68-jre8 #代表使用哪个镜像，类似于docker run指定的镜像名称
+    ports:      #代表宿主机和容器中端口映射
+      - 8080:8080

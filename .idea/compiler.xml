@@ -18,7 +18,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="z-chenger-gateway" options="-parameters" />
+      <module name="z-chenger-gateway" options="" />
       <module name="z-chenger-gateway-client" options="-parameters" />
       <module name="z-chenger-gateway-core" options="-parameters" />
       <module name="z-chenger-gateway-utils" options="-parameters" />

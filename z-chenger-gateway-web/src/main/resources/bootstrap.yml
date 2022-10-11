@@ -1,12 +1,5 @@
 server:
   port: 8083
 spring:
-  application:
-    name: gateway-server
-  cloud:
-    nacos:
-      server-addr: 123.207.20.180:10311
-      discovery:
-        cluster-name: CD
-      config:
-        file-extension: yaml
+  profiles:
+    active: prod
