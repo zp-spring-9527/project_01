@@ -22,7 +22,10 @@ pipeline{
    //1.编译
    stage('代码编译'){
    agent {
-          docker {image 'maven:3-alpine'}
+          docker {
+          image 'maven:3-alpine'
+          args '-v /var/jenkins_home/app_conf/maven/repository:/opt/repository'
+          }
         }
       steps{
       echo '编译......'
