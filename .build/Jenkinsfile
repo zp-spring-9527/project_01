@@ -4,12 +4,28 @@ pipeline{
    agent any
    //定义环境信息
    //定义流水线的加工流程
-
+   //0.环境检查
    stages{
+   stage('环境检查'){
+     sh 'printenv'
+     echo '正在检查基本信息'
+      sh 'echo $SSH_CONNECTION'
+      sh 'java -version'
+      sh 'git --version'
+      sh 'docker verion'
+
+   }
+
    //1.编译
    stage('代码编译'){
+   agent {
+          docker {image 'maven:3-alpine'}
+        }
       steps{
       echo '编译......'
+      sh  'pwd && ls -alh'
+      sh  'mvn -v'
+
       }
    }
 
@@ -17,13 +33,8 @@ pipeline{
    stage('代码测试'){
       steps{
       echo '测试......'
-      sh  'pwd && ls -l'
-      sh 'echo $SSH_CONNECTION'
-      sh 'java -version'
 
-      sh 'git --version'
-      sh 'docker verion'
-      sh 'mvn -v'
+
       }
    }
 
