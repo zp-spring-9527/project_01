@@ -7,12 +7,15 @@ pipeline{
    //0.环境检查
    stages{
    stage('环境检查'){
-     sh 'printenv'
-     echo '正在检查基本信息'
-      sh 'echo $SSH_CONNECTION'
-      sh 'java -version'
-      sh 'git --version'
-      sh 'docker verion'
+   steps{
+   sh 'printenv'
+        echo '正在检查基本信息'
+         sh 'echo $SSH_CONNECTION'
+         sh 'java -version'
+         sh 'git --version'
+         sh 'docker verion'
+   }
+
 
    }
 
