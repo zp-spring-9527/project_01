@@ -18,7 +18,7 @@ pipeline{
       steps{
       echo '测试......'
       sh  'pwd && ls -l'
-      echo '${SSH_CONNECTION}'
+      echo '$SSH_CONNECTION'
       }
    }
 
