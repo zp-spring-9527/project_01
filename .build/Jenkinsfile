@@ -18,7 +18,9 @@ pipeline{
       steps{
       echo '测试......'
       sh  'pwd && ls -l'
-      echo '$SSH_CONNECTION'
+      sh 'echo $SSH_CONNECTION'
+      sh 'java -version'
+      sh 'git --version'
       }
    }
 
