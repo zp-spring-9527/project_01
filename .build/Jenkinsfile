@@ -13,7 +13,7 @@ pipeline{
          sh 'echo $SSH_CONNECTION'
          sh 'java -version'
          sh 'git --version'
-         sh 'docker verion'
+         sh 'docker version'
    }
 
 
